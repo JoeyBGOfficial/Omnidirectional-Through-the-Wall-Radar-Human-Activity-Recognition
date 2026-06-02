@@ -1,6 +1,8 @@
 <div align="center">
 
-<h1 style="color:#000000;">Omnidirectional TWR HAR mDOF Open Source</h1>
+<img src="./Multi-View_Scenario.jpg" alt="Multi-View Scenario" width="60%" />
+
+<h1 style="color:#000000;">Omnidirectional TWR HAR</h1>
 
 <p>
   <b>Micro-Doppler Optical Flow Feature for Omnidirectional Through-the-Wall Radar Human Activity Recognition</b>
@@ -40,21 +42,6 @@
 
 Through-the-wall radar (TWR) human activity recognition (HAR) is strongly affected by observation orientation. A classifier trained at one radar view often suffers from severe performance degradation when the same activity is observed from another view. To improve cross-orientation generalization, this work extracts the horizontal component of the micro-Doppler optical flow from Doppler-time maps (DTMs), which can suppress the dominant orientation-induced feature variation while preserving human motion dynamics.
 
-The default workflow of this repository is:
-
-<div align="center">
-
-| Stage | Main Function |
-| :---: | :--- |
-| 1 | Read and preprocess DTM images |
-| 2 | Slice one 4 s DTM into 0-3 s and 1-4 s overlapped frames |
-| 3 | Estimate pyramid Lucas-Kanade micro-Doppler optical flow |
-| 4 | Reduce the horizontal mDOF component into a compact feature map and sequence |
-| 5 | Train a dual-branch MATLAB deep network using only 0-degree data |
-| 6 | Directly test the trained model on 30-330-degree views |
-
-</div>
-
 ### 📄 Paper Information
 
 * **Theory Paper**
@@ -76,25 +63,25 @@ The default workflow of this repository is:
 <table>
   <tr align="center">
     <td width="50%">
-      <h3>🎯 1. Single-View Training</h3>
-      <p>The model is trained and validated only with the 0-degree training/validation set. It is then directly generalized to 30-330-degree testing views without target-orientation fine-tuning.</p>
+      <h3>🧠 1. Orientation-Invariant Theory</h3>
+      <p>An augmented human kinematic model is coupled with optical flow on DTMs, proving that the horizontal mDOF component cancels the dominant first-order orientation factor.</p>
       <br>
     </td>
     <td width="50%">
-      <h3>🌊 2. mDOF Feature Representation</h3>
-      <p>The Doppler-time map is sliced along slow time, and the horizontal component of the estimated optical flow is used as an orientation-robust micro-Doppler representation.</p>
+      <h3>🌊 2. Unsupervised mDOF Extraction</h3>
+      <p>A functional-analysis-inspired optical-flow pipeline extracts large-scale micro-Doppler motion fields from DTMs without requiring orientation labels or supervised feature annotations.</p>
       <br>
     </td>
   </tr>
   <tr align="center">
     <td>
-      <h3>🧩 3. MATLAB One-Key Training</h3>
-      <p>The repository contains a one-key training script for dataset indexing, feature extraction, feature caching, network training, validation visualization, and cross-orientation testing.</p>
+      <h3>🧩 3. Manifold-Based Feature Reduction</h3>
+      <p>Local linear smoothing and compact mDOF reduction suppress outliers and noise, lower feature dimension, and preserve temporal activity dynamics with stronger cross-view consistency.</p>
       <br>
     </td>
     <td>
-      <h3>🚀 4. New DTM Inference</h3>
-      <p>A standalone inference script is provided for a new input DTM image. It outputs the predicted activity label, Top-K confidence scores, and visualizes the extracted mDOF feature.</p>
+      <h3>🚀 4. Single-Orientation Generalization</h3>
+      <p>The recognition framework is trained only on the main 0-degree view and directly evaluated on 30-330-degree simulated and measured testing views to verify omnidirectional HAR ability.</p>
       <br>
     </td>
   </tr>
@@ -224,41 +211,19 @@ Then run:
 run("Main_Infer_New_DTM.m");
 ```
 
----
-
-## 📁 IV. Repository Structure
-
-<div align="center">
-
-| Folder / File | Description |
-| :--- | :--- |
-| `Main_Train_Omnidirectional_TWR_HAR_mDOF.m` | One-key training, validation, testing, visualization, and model saving script |
-| `Main_Infer_New_DTM.m` | One-key inference script for a new DTM image |
-| `Functions/` | Dataset indexing, preprocessing, mDOF extraction, datastore construction, network training, evaluation, and model package utilities |
-| `Visualization/` | Unified JoeyBG-style visualization functions |
-| `Multi-View_RWSet/` | Measured real-world multi-view DTM dataset |
-| `Multi-View_SimHSet/` | Simulated multi-view DTM dataset |
-| `Generated_Features/` | Automatically generated mDOF feature cache |
-| `Trained_Models/` | Automatically generated trained model packages |
-| `Training_Results/` | Automatically generated validation and testing figures |
-
-</div>
-
----
-
 ## ⚠️ V. Important Notes
 
-**1. Dataset Usage** <br>
+**📊 1. Dataset Usage** <br>
 The training and validation subset contains only 0-degree DTM images. The script splits this subset into training and validation sets with an 8:2 class-balanced ratio. The testing subset contains 30-330-degree views and is used only for cross-orientation evaluation.
 
-**2. Feature Cache** <br>
+**💾 2. Feature Cache** <br>
 The first full run may take a long time because every DTM image needs to be converted into mDOF features. The extracted features are stored in `Generated_Features/` and reused automatically in later runs. To recompute them, set:
 
 ```matlab
 Config.Feature.Force_Recompute_Features = true;
 ```
 
-**3. Accuracy Tuning** <br>
+**📈 3. Accuracy Tuning** <br>
 The default feature extraction size balances speed and accuracy. For high-accuracy full experiments, increasing the following parameter is recommended:
 
 ```matlab
@@ -267,9 +232,9 @@ Config.Feature.Flow_Estimation_Size = 384;  % or 512
 
 Please tune parameters only according to the 0-degree validation set, and do not use testing views for model training.
 
-**4. Copyright & Usage Rights** <br>
+**🔐 4. Copyright & Usage Rights** <br>
 This repository is released for learning and academic research purposes. Any direct use for paper submissions, patents, or commercialization should receive explicit consent from the author or research team.
 
 <div align="center">
-  <p><i>If you find this repository helpful, please consider citing our related papers and giving this repository a star. Really appreciated!</i></p>
+  <p><i>⭐ If you find this repository helpful, please consider citing our related papers and giving this repository a star. Really appreciated! ⭐</i></p>
 </div>
