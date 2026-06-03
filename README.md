@@ -105,7 +105,7 @@ Suggested environment:
 Download or clone the whole repository, then open MATLAB and enter the repository root folder:
 
 ```matlab
-cd("Your_Path/Omnidirectional-Through-the-Wall-Radar-Human-Activity-Recognition");
+cd("Your_Path/Omnidirectional-Through-the-Wall-Radar-Human-Activity-Recognition-main");
 ```
 
 ### 🗂️ Part 2: Prepare Dataset Folders
