@@ -56,7 +56,7 @@ Through-the-wall radar (TWR) human activity recognition (HAR) is strongly affect
   * **Title:** Omnidirectional Through-the-Wall Radar Human Activity Recognition Based on Micro-Doppler Optical Flow Feature and Dual-Branch RPNN.
   * **Journal Reference:** Submitted to IEEE Transactions on Neural Networks and Learning Systems (IEEE TNNLS), under review.
 
-**If you find that the proposed method does not work well on your own dataset, the following two alternative approaches may yield optimistic results. These are all the fruits of our exploration during the research process:**
+**😊 If you find that the proposed method does not work well on your own dataset, the following two alternative approaches may yield optimistic results. These are all the fruits of our exploration during the research process:**
 
 | Omnidirectional TWR HAR (Small Transfer Version) | Omnidirectional TWR HAR (Learn Invariance Version) |
 | :---: | :---: |
