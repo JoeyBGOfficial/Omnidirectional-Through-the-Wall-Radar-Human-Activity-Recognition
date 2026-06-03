@@ -24,6 +24,6 @@ function Model_Package_Path = SaveModelPackage(Net, Train_Info, Config, Class_Na
 
     Model_Package_Path = fullfile(Config.Output.Model_Folder,char(Config.Output.Model_File_Name));
     save(Model_Package_Path,'Model_Package','-v7.3');
-    fprintf('[JoeyBG] Model package saved to: %s\n', Model_Package_Path);
+    fprintf('Model package saved to: %s\n', Model_Package_Path);
 
 end

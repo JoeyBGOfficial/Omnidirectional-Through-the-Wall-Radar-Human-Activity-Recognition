@@ -36,7 +36,7 @@ function Data_Table = PreparemDOFFeatureCache(Data_Table, Config, Force_Recomput
                 mkdir(Feature_Folder);
             end
 
-            fprintf('[JoeyBG] Extracting mDOF feature %d/%d: %s\n', ...
+            fprintf('Extracting mDOF feature %d/%d: %s\n', ...
                 Sample_Index, height(Data_Table), char(Data_Table.FilePath(Sample_Index)));
 
             Feature_Record = ExtractmDOFFeature(char(Data_Table.FilePath(Sample_Index)), Config);
@@ -56,7 +56,7 @@ function Data_Table = PreparemDOFFeatureCache(Data_Table, Config, Force_Recomput
                 'Reduced_Flow_U','Feature_Metadata','-v7.3');
         else
             if Sample_Index == 1 || mod(Sample_Index,100) == 0 || Sample_Index == height(Data_Table)
-                fprintf('[JoeyBG] Reusing mDOF feature cache %d/%d.\n', Sample_Index, height(Data_Table));
+                fprintf('Reusing mDOF feature cache %d/%d.\n', Sample_Index, height(Data_Table));
             end
         end
     end

@@ -17,6 +17,7 @@
 clear;
 close all;
 clc;
+disp('---------- © Author: JoeyBG © ----------');
 
 Project_Path = fileparts(mfilename('fullpath'));
 addpath(fullfile(Project_Path,'Functions'));
@@ -46,14 +47,14 @@ end
 %% mDOF Feature Extraction and Activity Recognition
 Prediction_Result = PredictDTMActivity(Input_DTM_Path,Model_Package,Config);
 
-fprintf('[JoeyBG] Input DTM: %s\n',Input_DTM_Path);
-fprintf('[JoeyBG] Predicted activity: %s (confidence %.2f%%).\n', ...
+fprintf('Input DTM: %s\n',Input_DTM_Path);
+fprintf('Predicted activity: %s (confidence %.2f%%).\n', ...
     Prediction_Result.Predicted_Label,100*Prediction_Result.Predicted_Score);
 
-disp('[JoeyBG] Top-K prediction results:');
+disp('Top-K prediction results:');
 for i = 1:numel(Prediction_Result.TopK_Labels)
     fprintf('    %s: %.2f%%\n',Prediction_Result.TopK_Labels(i),100*Prediction_Result.TopK_Scores(i));
 end
 
 PlotInferenceResult(Prediction_Result,Config,'Inference_Result.png');
-disp('[JoeyBG] One-key inference workflow has finished.');
+disp('One-key inference workflow has finished.');

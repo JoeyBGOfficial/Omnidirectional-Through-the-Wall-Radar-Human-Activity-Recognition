@@ -31,7 +31,7 @@ function Orientation_Results = EvaluateByOrientation(Net, Testing_Table, Config,
         Sample_Number_List(Angle_Index) = height(Current_Table);
         Metrics_By_Angle{Angle_Index} = Current_Metrics;
 
-        fprintf('[JoeyBG] Testing angle %03d deg: Accuracy = %.2f%%, Macro-F1 = %.2f%%.\n', ...
+        fprintf('Testing angle %03d deg: Accuracy = %.2f%%, Macro-F1 = %.2f%%.\n', ...
             Current_Angle,Current_Metrics.Accuracy,Current_Metrics.MacroF1);
     end
 
