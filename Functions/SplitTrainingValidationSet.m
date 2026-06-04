@@ -24,8 +24,8 @@ function [Training_Table, Validation_Table] = SplitTrainingValidationSet(Trainin
         Current_Rows = Current_Rows(randperm(numel(Current_Rows)));
 
         Number_of_Training = floor(Config.Training_Validation_Ratio*numel(Current_Rows));
-        Training_Rows = [Training_Rows; Current_Rows(1:Number_of_Training)]; %#ok<AGROW>
-        Validation_Rows = [Validation_Rows; Current_Rows(Number_of_Training+1:end)]; %#ok<AGROW>
+        Training_Rows = [Training_Rows; Current_Rows(1:Number_of_Training)];
+        Validation_Rows = [Validation_Rows; Current_Rows(Number_of_Training+1:end)];
     end
 
     Training_Table = sortrows(TrainingValidationTable(Training_Rows,:),{'ClassIndex','SampleIndex'});

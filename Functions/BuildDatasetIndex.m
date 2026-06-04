@@ -36,7 +36,7 @@ function Dataset_Index = BuildDatasetIndex(Config)
         Current_Files = sortImageFilesByNumericName(dir(fullfile(Current_Folder,'*.png')));
         Current_Table = buildSampleTable(Current_Files, Current_Folder, Current_Class, Class_Index, ...
             0, "TrainingValidation", Config.Dataset_Name, Class_Names);
-        TrainingValidationTable = [TrainingValidationTable; Current_Table]; %#ok<AGROW>
+        TrainingValidationTable = [TrainingValidationTable; Current_Table];
     end
 
     Angle_Dirs = listVisibleDirectories(Testing_Folder);
@@ -54,7 +54,7 @@ function Dataset_Index = BuildDatasetIndex(Config)
             Current_Files = sortImageFilesByNumericName(dir(fullfile(Current_Folder,'*.png')));
             Current_Table = buildSampleTable(Current_Files, Current_Folder, Current_Class, Class_Index, ...
                 Current_Angle, "Testing", Config.Dataset_Name, Class_Names);
-            TestingTable = [TestingTable; Current_Table]; %#ok<AGROW>
+            TestingTable = [TestingTable; Current_Table];
         end
     end
 

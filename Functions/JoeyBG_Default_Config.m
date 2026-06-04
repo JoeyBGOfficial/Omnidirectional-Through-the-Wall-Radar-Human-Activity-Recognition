@@ -19,27 +19,27 @@ function Config = JoeyBG_Default_Config(Project_Path)
 
     Config = struct();
     Config.Project_Path = char(Project_Path);
-    Config.Dataset_Name = "RWSet";                         % Options: "RWSet" or "SimHSet".
+    Config.Dataset_Name = "RWSet";                                          % Options: "RWSet" or "SimHSet".
     Config.Random_Seed = 20260602;
     Config.Training_Validation_Ratio = 0.80;
 
     % Parameters for micro-Doppler optical flow feature extraction.
-    Config.Feature.Slow_Time_Length_of_DTM = 4;             % Slow-time length of one DTM (s).
-    Config.Feature.Sliding_Frame_Window = 3;                % Sliding window length (s).
-    Config.Feature.Sliding_Frame_Overlap = 2;               % Sliding window overlap (s).
-    Config.Feature.Max_Frequency_of_DTM = 60;               % Doppler frequency range is [-60, 60] Hz.
-    Config.Feature.Flow_Estimation_Size = 256;              % Increase to 384/512 for final high-accuracy training.
-    Config.Feature.Output_Size = 128;                       % Size of the reduced mDOF feature map.
-    Config.Feature.Window_Size = 7;                         % Local window size of pyramid Lucas-Kanade.
-    Config.Feature.Iterations = 3;                          % Iterations in each pyramid layer.
-    Config.Feature.Pyramid_Layers = 3;                      % Number of pyramid layers.
-    Config.Feature.LK_Epsilon = 1e-3;                       % Stabilizer of the LK normal equation.
-    Config.Feature.Max_Update = 5;                          % Pixel-level flow update clipping.
-    Config.Feature.Flow_Smooth_Sigma = 0.60;                % Gaussian smoothing strength for the flow field.
-    Config.Feature.Robust_Percentile_Low = 1;               % Low percentile for robust feature normalization.
-    Config.Feature.Robust_Percentile_High = 99;             % High percentile for robust feature normalization.
-    Config.Feature.Energy_Weight_Power = 0.50;              % Amplitude weight used to suppress weak-background flow.
-    Config.Feature.Force_Recompute_Features = false;        % Reuse cached mDOF features by default.
+    Config.Feature.Slow_Time_Length_of_DTM = 4;                             % Slow-time length of one DTM (s).
+    Config.Feature.Sliding_Frame_Window = 3;                                % Sliding window length (s).
+    Config.Feature.Sliding_Frame_Overlap = 2;                               % Sliding window overlap (s).
+    Config.Feature.Max_Frequency_of_DTM = 60;                               % Doppler frequency range is [-60, 60] Hz.
+    Config.Feature.Flow_Estimation_Size = 256;                              % Increase to 384/512 for final high-accuracy training.
+    Config.Feature.Output_Size = 128;                                       % Size of the reduced mDOF feature map.
+    Config.Feature.Window_Size = 7;                                         % Local window size of pyramid Lucas-Kanade.
+    Config.Feature.Iterations = 3;                                          % Iterations in each pyramid layer.
+    Config.Feature.Pyramid_Layers = 3;                                      % Number of pyramid layers.
+    Config.Feature.LK_Epsilon = 1e-3;                                       % Stabilizer of the LK normal equation.
+    Config.Feature.Max_Update = 5;                                          % Pixel-level flow update clipping.
+    Config.Feature.Flow_Smooth_Sigma = 0.60;                                % Gaussian smoothing strength for the flow field.
+    Config.Feature.Robust_Percentile_Low = 1;                               % Low percentile for robust feature normalization.
+    Config.Feature.Robust_Percentile_High = 99;                             % High percentile for robust feature normalization.
+    Config.Feature.Energy_Weight_Power = 0.50;                              % Amplitude weight used to suppress weak-background flow.
+    Config.Feature.Force_Recompute_Features = false;                        % Reuse cached mDOF features by default.
 
     % Parameters for dual-branch recognition network training.
     Config.Training.MiniBatchSize = 32;
