@@ -60,7 +60,7 @@ Through-the-wall radar (TWR) human activity recognition (HAR) is strongly affect
 
 | Omnidirectional TWR HAR (Small Transfer Version) | Omnidirectional TWR HAR (Multi-Domain Version) |
 | :---: | :---: |
-| <img width="831" height="601" alt="Small Transfer Version" src="https://github.com/user-attachments/assets/b1ede279-504e-4c33-8ce4-2eb6e1873d37" /> | <img width="838" height="634" alt="Multi-Domain Version" src="https://github.com/user-attachments/assets/85c8d58d-9d9a-4f9d-aaac-0925ab917ab9" /> | 
+| <img width="838" height="622" alt="ScreenShot_2026-06-04_211615_724" src="https://github.com/user-attachments/assets/fbc4db95-30aa-4b87-8ddd-1c58f6b2a0dc" /> | <img width="838" height="634" alt="Multi-Domain Version" src="https://github.com/user-attachments/assets/85c8d58d-9d9a-4f9d-aaac-0925ab917ab9" /> | 
 | https://github.com/JoeyBGOfficial/Omnidirectional-Through-the-Wall-Radar-Human-Activity-Recognition-Small-Transfer-Version | https://github.com/JoeyBGOfficial/Omnidirectional-Through-the-Wall-Radar-Human-Activity-Recognition-Multi-Domain-Version |
 
 ---
