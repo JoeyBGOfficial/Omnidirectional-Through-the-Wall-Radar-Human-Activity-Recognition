@@ -44,17 +44,8 @@ Through-the-wall radar (TWR) human activity recognition (HAR) is strongly affect
 
 ### 📄 Paper Information
 
-* **Theory Paper**
-  * **Title:** Orientation-Invariant Micro-Doppler Signature Representation in Through-the-Wall Radar Human Activity Recognition.
-  * **Journal Reference:** Submitted to IEEE Transactions on Signal Processing (IEEE TSP), under review.
-
-* **Feature Extraction Paper**
-  * **Title:** Unsupervised Micro-Doppler Optical Flow Feature Extraction Method Based on Functional Analysis and Manifold Learning.
-  * **Journal Reference:** Submitted to IEEE Transactions on Aerospace and Electronic Systems (IEEE TAES), under review.
-
-* **Recognition Paper**
-  * **Title:** Omnidirectional Through-the-Wall Radar Human Activity Recognition Based on Micro-Doppler Optical Flow Feature and Dual-Branch RPNN.
-  * **Journal Reference:** Submitted to IEEE Transactions on Neural Networks and Learning Systems (IEEE TNNLS), under review.
+* **Title:** Orientation-Invariant Micro-Doppler Signature Representation in Through-the-Wall Radar Human Activity Recognition.
+* **Journal Reference:** Submitted to IEEE Transactions on Signal Processing (IEEE TSP), under review.
 
 **😊 If you find that the proposed method does not work well on your own dataset, the following two alternative approaches may yield optimistic results. These are all the fruits of our exploration during the research process. With the help of AI tools, we successfully organize them into projects that can be run with one click:**
 
