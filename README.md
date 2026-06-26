@@ -47,7 +47,7 @@ Through-the-wall radar (TWR) human activity recognition (HAR) is strongly affect
 * **Title:** Orientation-Invariant Micro-Doppler Signature Representation in Through-the-Wall Radar Human Activity Recognition.
 * **Journal Reference:** Submitted to IEEE Transactions on Signal Processing (IEEE TSP), under review.
 
-**😊 If you find that the proposed method does not work well on your own dataset, the following two alternative approaches may yield optimistic results. These are all the fruits of our exploration during the research process. With the help of AI tools, we successfully organize them into projects that can be run with one click:**
+**😊 If you find that the proposed method does not work well on your own dataset, the following two alternative approaches may yield optimistic results. These are all the fruits of our exploration during the research process. We organize them into projects that can be run with one click:**
 
 | Omnidirectional TWR HAR (Small Transfer Version) | Omnidirectional TWR HAR (Multi-Domain Version) |
 | :---: | :---: |
